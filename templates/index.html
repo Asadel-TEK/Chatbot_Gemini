@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot Disdagrin</title>
+</head>
+<body>
+    <h1>Chatbot Disdagrin</h1>
+
+    {% if response %}
+        <p><b>Anda:</b> {{ user_input }}</p>
+        <p><b>Disdagrin:</b> {{ response }}</p>
+    {% endif %}
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <input type="text" name="user_input" placeholder="Ketik pertanyaan Anda...">
+        <button type="submit">Kirim</button>
+    </form>
+</body>
+</html>
